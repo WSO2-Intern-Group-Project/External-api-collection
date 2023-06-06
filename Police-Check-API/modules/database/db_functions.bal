@@ -1,6 +1,6 @@
 import ballerinax/azure_cosmosdb as cosmosdb;
-import identity_check_api.constants;
-import identity_check_api.types;
+import police_check_api.constants;
+import police_check_api.types;
 
 final cosmosdb:DataPlaneClient azureCosmosClient = check initializeDbClient();
 final string dbName = cosmosConfig.dbName;

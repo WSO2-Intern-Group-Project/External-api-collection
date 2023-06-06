@@ -1,17 +1,21 @@
 import ballerina/http;
+import identity_check_api.database;
+import identity_check_api.types;
+import identity_check_api.constants;
 
-# A service representing a network-accessible API
-# bound to port `9090`.
 service / on new http:Listener(9090) {
 
-    # A resource for generating greetings
-    # + name - the input string name
-    # + return - string name with hello message or error
-    resource function get greeting(string name) returns string|error {
-        // Send a response back to the caller.
-        if name is "" {
-            return error("name should not be empty!");
+    # Get police records by user nic
+    #
+    # + nic - User nic
+    # + return - Json array of police records under the user nic
+    isolated resource function get policeRecordsByNIC(string nic) returns json[]|types:AppServerError {
+        json[]|error  outputs = database:getPoliceReportsByNIC(nic);
+        if outputs is error {
+            return <types:AppServerError>{
+                body: {message: constants:INTERNAL_ERROR}
+            };
         }
-        return "Hello, " + name;
+        return outputs;
     }
 }

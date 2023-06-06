@@ -323,7 +323,7 @@ dependencies = [
 
 [[package]]
 org = "internprojectgroup5"
-name = "external_apis"
+name = "identity_check_api"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
@@ -331,9 +331,9 @@ dependencies = [
 	{org = "ballerinax", name = "azure_cosmosdb"}
 ]
 modules = [
-	{org = "internprojectgroup5", packageName = "external_apis", moduleName = "external_apis"},
-	{org = "internprojectgroup5", packageName = "external_apis", moduleName = "external_apis.constants"},
-	{org = "internprojectgroup5", packageName = "external_apis", moduleName = "external_apis.database"},
-	{org = "internprojectgroup5", packageName = "external_apis", moduleName = "external_apis.types"}
+	{org = "internprojectgroup5", packageName = "identity_check_api", moduleName = "identity_check_api"},
+	{org = "internprojectgroup5", packageName = "identity_check_api", moduleName = "identity_check_api.constants"},
+	{org = "internprojectgroup5", packageName = "identity_check_api", moduleName = "identity_check_api.database"},
+	{org = "internprojectgroup5", packageName = "identity_check_api", moduleName = "identity_check_api.types"}
 ]
 

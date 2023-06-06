@@ -1,5 +1,5 @@
 import ballerinax/azure_cosmosdb as cosmosdb;
-import external_apis.types;
+import identity_check_api.types;
 
 public configurable types:Config cosmosConfig = ?;
 

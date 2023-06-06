@@ -3,7 +3,7 @@
 
 [package]
   distribution = "2201.4.1"
-  name = "external_apis"
+  name = "identity_check_api"
   org = "internprojectgroup5"
   version = "0.1.0"
 

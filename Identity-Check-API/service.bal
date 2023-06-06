@@ -1,7 +1,7 @@
 import ballerina/http;
-import external_apis.database;
-import external_apis.types;
-import external_apis.constants;
+import identity_check_api.database;
+import identity_check_api.types;
+import identity_check_api.constants;
 
 service / on new http:Listener(9090) {
 

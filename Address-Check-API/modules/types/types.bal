@@ -9,13 +9,13 @@ public type Config record {
     string dbName;
 };
 
-# Type related to Police report container in cosmos db
+# Type related to address container in cosmos db
 #
 # + NIC - Nic of the uesr
-# + date - date of the police report
-# + description - description of the police report
-public type PoliceReport record {|
+# + name - name of the user
+# + address - address of the user
+public type AddressReport record {|
     string NIC;
-    string date;
-    string description;
+    string name;
+    string address;
 |};
